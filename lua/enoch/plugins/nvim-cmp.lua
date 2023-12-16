@@ -4,11 +4,18 @@ return {
     "p00f/clangd_extensions.nvim",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp",
+    "quangnguyen30192/cmp-nvim-ultisnips",
   },
   event = "VeryLazy",
   config = function()
     local cmp = require("cmp")
     cmp.setup {
+      snippet = {
+        expand = function(args)
+          -- For `ultisnips` user.
+          vim.fn["UltiSnips#Anon"](args.body)
+        end,
+      },
       mapping = cmp.mapping.preset.insert {
         ["<Tab>"] = function(fallback)
           if cmp.visible() then
@@ -33,6 +40,7 @@ return {
       sources = {
         { name = "nvim_lsp" },
         { name = "buffer" },
+        { name = "ultisnips" }, -- For ultisnips user.
       },
       sorting = {
         comparators = {
