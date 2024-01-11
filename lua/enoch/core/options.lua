@@ -20,5 +20,8 @@ opt.cursorline = true -- highlight the current cursor line
 -- appearance
 opt.termguicolors = true
 
+-- disable swapfile
+opt.swapfile = false
+
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register

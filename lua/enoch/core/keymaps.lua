@@ -13,3 +13,8 @@ keymap.set("i", "<c-t>", "<Esc>b~lea")
 
 -- Quit all opened buffers
 keymap.set("n", "<leader>Q", "<cmd>qa!<cr>", { silent = true, desc = "quit nvim" })
+
+-- Move current line up and down
+-- To get this working for mac
+keymap.set("n", "∆", ":m .+1<CR>==") -- move line up(n)
+keymap.set("n", "˚", ":m .-2<CR>==") -- move line down(n)

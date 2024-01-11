@@ -15,7 +15,7 @@ return {
       map("n", "<C-]>", vim.lsp.buf.definition)
       map("n", "K", vim.lsp.buf.hover)
       map("n", "<C-k>", vim.lsp.buf.signature_help)
-      map("n", "<space>rn", vim.lsp.buf.rename, { desc = "varialbe rename" })
+      map("n", "<space>rn", vim.lsp.buf.rename, { desc = "variable rename" })
       map("n", "gr", vim.lsp.buf.references, { desc = "show references" })
       -- Set some key bindings conditional on server capabilities
       if client.server_capabilities.documentFormattingProvider then
