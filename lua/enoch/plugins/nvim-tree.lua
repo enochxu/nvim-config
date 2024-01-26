@@ -10,7 +10,11 @@ return {
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
 
-    nvimtree.setup({})
+    nvimtree.setup({
+      filters = {
+        git_ignored = false,
+      }
+    })
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness

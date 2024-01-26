@@ -1,6 +1,16 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
+
+keymap.set("n", "<space>o", "printf('m`%so<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line below",
+})
+
+keymap.set("n", "<space>O", "printf('m`%sO<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line above",
+})
 
 -- Save key strokes (now we do not need to press shift to enter command mode).
 keymap.set({ "n", "x" }, ";", ":")
