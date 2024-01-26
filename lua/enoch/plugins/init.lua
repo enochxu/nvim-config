@@ -3,4 +3,5 @@ return {
   { "SirVer/ultisnips", dependencies = {
     "honza/vim-snippets",
   }, event = "InsertEnter" },
+  { "nvim-zh/better-escape.vim", event = { "InsertEnter" } },
 }
