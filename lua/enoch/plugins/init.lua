@@ -4,4 +4,5 @@ return {
     "honza/vim-snippets",
   }, event = "InsertEnter" },
   { "nvim-zh/better-escape.vim", event = { "InsertEnter" } },
+  { "tpope/vim-commentary", event = "VeryLazy" }
 }
