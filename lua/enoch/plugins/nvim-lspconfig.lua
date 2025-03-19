@@ -3,6 +3,7 @@ return {
   event = { "BufRead", "BufNewFile" },
   config = function()
     local custom_attach = function(client, bufnr)
+      local keymap = vim.keymap
       -- Mappings.
       local map = function(mode, l, r, opts)
         opts = opts or {}
